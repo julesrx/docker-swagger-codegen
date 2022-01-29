@@ -1,5 +1,17 @@
-# Docker swagger codegen
+# Docker Swagger Codegen
+
+## Usage
+
+Build the image:
 
 ```bash
-$ docker run -v "<host_outpath>:/out" -it codegen -i <json> -l <lang>
+docker build -t codegen .
+```
+
+Run the generator:
+
+```bash
+docker run -v "$PWD/out:/out" -it codegen \
+    -i https://petstore.swagger.io/v2/swagger.json \
+    -l go
 ```

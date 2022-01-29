@@ -10,10 +10,6 @@ RUN tar -xvzf v${CODEGEN_VERSION}.tar.gz
 WORKDIR /swagger-codegen/swagger-codegen-${CODEGEN_VERSION}
 
 RUN mvn clean package
-# RUN java -jar modules/swagger-codegen-cli/target/swagger-codegen-cli.jar generate \
-#    -i https://petstore.swagger.io/v2/swagger.json \
-#    -l php \
-#    -o /var/tmp/php_api_client
 
 COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
