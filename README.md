@@ -1,5 +1,7 @@
 # Docker Swagger Codegen
 
+Docker image to easily run [Swagger Codegen](https://swagger.io/tools/swagger-codegen/).
+
 ## Usage
 
 Build the image:
